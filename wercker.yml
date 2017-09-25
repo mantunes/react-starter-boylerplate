@@ -4,11 +4,10 @@ build:
   # The steps that will be executed on build
   steps:
     # A step that executes `npm install` command
-    - npm install
     - script:
-        name: echo libs
+        name: install JS dependencies
         code: |
-          npm list --depth=0
+          npm install
     # A step that executes `npm test` command
     - script:
         name: lint
