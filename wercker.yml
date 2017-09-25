@@ -19,5 +19,5 @@ build:
     - script:
         name: test
         code: |
-          npm-test
+          npm run test
 
