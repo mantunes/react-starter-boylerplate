@@ -8,10 +8,6 @@ build:
         name: install JS dependencies
         code: |
           npm install
-    - script:
-        name: echo libs
-        code: |
-          npm list --depth=0
     # A step that executes `npm test` command
     - script:
         name: lint
