@@ -4,31 +4,31 @@ Redlight Software
 
 <br />
 
-##What##
+## What
 
 This is a simple boylerplate to create a React App. It includes a number of tools already configured.
 
 <br />
 
-##How##
+## How
 
 <br />
 
-###install dependencies###
+### install dependencies
 
 Installs all dependencies from package.json:
 
 ```npm install``` or ```yarn```
 
-###run###
+### run
 
 ```npm start``` or ```yarn start```
 
-###test###
+### test
 
 ```npm test``` or ```yarn test```
 
-###eslint & prettier###
+### eslint & prettier
 
 These two tools are already pre-configured, and you can run them with:
 
@@ -38,7 +38,7 @@ If you want to clean up your code using eslint and prettier rules, you can run:
 
 ```npm run format``` or ```yarn format```
 
-###branches###
+### branches
 
 There are two branches:
 
@@ -51,7 +51,7 @@ The 'setup-redux' branch uses a different file structure. It's called "Ducks Fil
 
 <br />
 
-###dotenv###
+### dotenv
 
 You can add keys to the ".env" file, and the name should follow this pattern:
 
@@ -59,7 +59,7 @@ REACT\_APP_[key]=[value]
 
 <br />
 
-###SASS###
+### SASS
 
 This boylerplate already includes a listener for preprocessing SASS files and generating CSS files. It should run along with ```npm start``` or ```yarn start```, but you can also run it alone with:
 
@@ -67,7 +67,7 @@ This boylerplate already includes a listener for preprocessing SASS files and ge
 
 <br />
 
-###CI###
+### CI
 
 There's a Wercker pre-configured to automatically test your code. Don't forget to setup Wercker on your repo and account.
 
