@@ -12,8 +12,6 @@ This is a simple boylerplate to create a React App. It includes a number of tool
 
 ## How
 
-<br />
-
 ### install dependencies
 
 Installs all dependencies from package.json:
@@ -28,6 +26,8 @@ Installs all dependencies from package.json:
 
 ```npm test``` or ```yarn test```
 
+<br />
+
 ### eslint & prettier
 
 These two tools are already pre-configured, and you can run them with:
@@ -37,6 +37,8 @@ These two tools are already pre-configured, and you can run them with:
 If you want to clean up your code using eslint and prettier rules, you can run:
 
 ```npm run format``` or ```yarn format```
+
+<br />
 
 ### branches
 
