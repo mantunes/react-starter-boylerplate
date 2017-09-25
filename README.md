@@ -1,4 +1,4 @@
-React App Boylerplate
+React App Boilerplate
 ===========
 Redlight Software
 
@@ -6,7 +6,7 @@ Redlight Software
 
 ## What
 
-This is a simple boylerplate to create a React App. It includes a number of tools already configured.
+This is a simple boilerplate to create a React App. It includes a number of tools already configured.
 
 <br />
 
@@ -63,7 +63,7 @@ REACT\_APP_[key]=[value]
 
 ### SASS
 
-This boylerplate already includes a listener for preprocessing SASS files and generating CSS files. It should run along with ```npm start``` or ```yarn start```, but you can also run it alone with:
+This boilerplate already includes a listener for preprocessing SASS files and generating CSS files. It should run along with ```npm start``` or ```yarn start```, but you can also run it alone with:
 
 ```npm run watch-css``` or ```yarn watch-css```
 
