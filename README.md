@@ -71,7 +71,7 @@ This boilerplate already includes a listener for preprocessing SASS files and ge
 
 ### CI
 
-There's a Wercker pre-configured to automatically test your code. Don't forget to setup Wercker on your repo and account.
+There's a Wercker pre-configured to automatically test your code using eslint and jest. Don't forget to setup Wercker on your repo and account.
 
 <br />
 
