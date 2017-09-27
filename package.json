@@ -33,6 +33,11 @@
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
+    "history": "^4.7.2",
+    "immutability-helper": "^2.4.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^15.6.1",
@@ -46,9 +51,15 @@
     "whatwg-fetch": "2.0.3",
     "react-logger": "^3.0.6",
     "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-redux": "next",
     "react-scripts": "1.0.13",
+    "recompose": "^0.25.0",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^4.10.0",
+    "redux-promise": "^0.5.3",
+    "superagent": "^3.6.0"
   },
   "scripts": {
     "start": "node scripts/start.js",

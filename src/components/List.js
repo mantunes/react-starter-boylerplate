@@ -1,11 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const List = (props) => (
+import Item from './Item';
+
+const List = props => (
   <ul>
-    {props.names.map((elem, i) => (
-      <li key={i} onClick={()=>(props.onRemove(i))}>{i} ~ {elem}</li>
+    {props.names.map(elem => (
+      <Item key={elem.id} onClick={props.onRemove} elem={elem} />
     ))}
   </ul>
-)
+);
+
+List.propTypes = {
+  names: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+  ),
+  onRemove: PropTypes.func.isRequired,
+};
 
 export default List;
