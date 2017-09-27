@@ -23,7 +23,7 @@ class HomeScreen extends React.Component {
   addName = event => {
     event.preventDefault();
     const elem = event.target.firstChild;
-    this.props.addName(elem.value);
+    if (elem.value !== '') this.props.addName(elem.value);
     elem.value = '';
   };
 

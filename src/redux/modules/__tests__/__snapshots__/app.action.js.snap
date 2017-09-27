@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ADD_NAME (Rui Miguel) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "name": "Rui Miguel",
+    },
+    "type": "ADD_NAME",
+  },
+]
+`;
+
+exports[`ADD_NAME (empty) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "name": "",
+    },
+    "type": "ADD_NAME",
+  },
+]
+`;
+
+exports[`SUBTRACT_NAME (0) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "index": 0,
+    },
+    "type": "SUBTRACT_NAME",
+  },
+]
+`;
+
+exports[`SUBTRACT_NAME (empty) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "index": undefined,
+    },
+    "type": "SUBTRACT_NAME",
+  },
+]
+`;
