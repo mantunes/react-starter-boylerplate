@@ -47,9 +47,11 @@ class App extends Component {
 
   render() {
     return !this.props.loading ? (
-      <Provider store={this.store}>
-        <Router history={history} />
-      </Provider>
+      <div className="App">
+        <Provider store={this.store}>
+          <Router history={history} />
+        </Provider>
+      </div>
     ) : null;
   }
 }

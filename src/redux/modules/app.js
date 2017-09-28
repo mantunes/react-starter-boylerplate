@@ -28,22 +28,15 @@ export async function getPost() {
     const response = await fetch(
       'https://jsonplaceholder.typicode.com/posts/1',
     );
-    console.log("..................");
-    console.log(response);
-    console.log("..................");
-    console.log(response.json);
-    console.log("..................");
     post = await response.json();
   } catch (error) {
     console.log(error);
   }
 
-  const bla = {
+  return {
     type: types.GET_POST,
     payload: { post },
   };
-
-  return bla;
 }
 
 export function clearPost() {

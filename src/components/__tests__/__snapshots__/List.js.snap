@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders all children 1`] = `
+<ul>
+  <Item
+    elem={
+      Object {
+        "id": 1,
+        "name": "Andre",
+      }
+    }
+    key="1"
+    onClick={[Function]}
+  />
+  <Item
+    elem={
+      Object {
+        "id": 2,
+        "name": "Joao",
+      }
+    }
+    key="2"
+    onClick={[Function]}
+  />
+  <Item
+    elem={
+      Object {
+        "id": 3,
+        "name": "Rui",
+      }
+    }
+    key="3"
+    onClick={[Function]}
+  />
+  <Item
+    elem={
+      Object {
+        "id": 4,
+        "name": "Sara",
+      }
+    }
+    key="4"
+    onClick={[Function]}
+  />
+</ul>
+`;
