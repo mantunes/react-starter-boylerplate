@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './style.scss';
+
 const Item = ({ onClick, elem }) => {
   const onRemove = () => onClick(elem.id);
   return (
-    <li>
+    <li className={styles.item}>
       {elem.id} ~ {elem.name}
       <button onClick={onRemove}> X </button>;
     </li>

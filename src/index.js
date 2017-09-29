@@ -11,8 +11,8 @@ import PropTypes from 'prop-types';
 
 import registerServiceWorker from './registerServiceWorker';
 import Router from './Router';
-import app from './redux/modules/app';
-import user from './redux/modules/user';
+import app from './redux/modules/App/index';
+import user from './redux/modules/User/index';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);

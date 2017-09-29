@@ -4,8 +4,8 @@ import { Route, Redirect } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
 
-import HomeScreen from './components/HomeScreen';
-import LoginScreen from './components/LoginScreen';
+import HomeScreen from './components/ecosystems/HomeScreen/index';
+import LoginScreen from './components/ecosystems/LoginScreen/index';
 
 const Router = ({ history, user }) => {
   const isLoggedIn = user !== null;

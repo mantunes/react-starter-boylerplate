@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 
-import AppReducer, { addName, removeName, getPost } from '../app';
+import AppReducer, { addName, removeName, getPost } from './index';
 
 const mockStore = configureMockStore([]);
 const store = mockStore({});

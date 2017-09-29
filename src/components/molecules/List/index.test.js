@@ -7,8 +7,8 @@ import Enzyme, { shallow } from 'enzyme';
 import { expect as expectChai } from 'chai';
 import Adapter from 'enzyme-adapter-react-16';
 
-import List from '../List';
-import Item from '../Item';
+import List from './index';
+import Item from './../../atoms/Item/index';
 
 Enzyme.configure({ adapter: new Adapter() });
 

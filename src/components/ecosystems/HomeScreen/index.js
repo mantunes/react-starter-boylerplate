@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { addName, removeName } from '../redux/modules/app';
-import { logout } from '../redux/modules/user';
-import Input from './Input';
-import List from './List';
+import { addName, removeName } from './../../../redux/modules/App/index';
+import { logout } from './../../../redux/modules/User/index';
+import Input from './../../molecules/Input/index';
+import List from './../../molecules/List/index';
 
 class HomeScreen extends React.Component {
   static propTypes = {
