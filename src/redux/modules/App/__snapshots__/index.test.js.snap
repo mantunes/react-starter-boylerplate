@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Action] ADD_NAME (Rui Miguel) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "name": "Rui Miguel",
+    },
+    "type": "ADD_NAME",
+  },
+]
+`;
+
+exports[`[Action] ADD_NAME (empty) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "name": "",
+    },
+    "type": "ADD_NAME",
+  },
+]
+`;
+
+exports[`[Action] GET_POST 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "post": Object {
+        "body": "quia et suscipit suscipit recusandae consequuntur rem eveniet architecto",
+        "id": 1,
+        "title": "sunt aut facere repellat provident occaecati",
+        "userId": 1,
+      },
+    },
+    "type": "GET_POST",
+  },
+]
+`;
+
+exports[`[Action] SUBTRACT_NAME (2) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "index": 2,
+    },
+    "type": "SUBTRACT_NAME",
+  },
+]
+`;
+
+exports[`[Action] SUBTRACT_NAME (empty) 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "index": undefined,
+    },
+    "type": "SUBTRACT_NAME",
+  },
+]
+`;
+
+exports[`[Reducer] ADD_NAME (Rui Miguel) 1`] = `
+Object {
+  "list": Array [
+    Object {
+      "id": 1,
+      "name": "Joao",
+    },
+    Object {
+      "id": 2,
+      "name": "Sara",
+    },
+    Object {
+      "id": 3,
+      "name": "Rui",
+    },
+    Object {
+      "id": 1483228800000,
+      "name": "Rui Miguel",
+    },
+  ],
+  "post": null,
+}
+`;
+
+exports[`[Reducer] GET_POST 1`] = `
+Object {
+  "list": Array [
+    Object {
+      "id": 1,
+      "name": "Joao",
+    },
+    Object {
+      "id": 2,
+      "name": "Sara",
+    },
+    Object {
+      "id": 3,
+      "name": "Rui",
+    },
+  ],
+  "post": Object {
+    "body": "quia et suscipit suscipit recusandae consequuntur rem eveniet architecto",
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati",
+    "userId": 1,
+  },
+}
+`;
+
+exports[`[Reducer] INITIAL STATE 1`] = `
+Object {
+  "list": Array [
+    Object {
+      "id": 1,
+      "name": "Joao",
+    },
+    Object {
+      "id": 2,
+      "name": "Sara",
+    },
+    Object {
+      "id": 3,
+      "name": "Rui",
+    },
+  ],
+  "post": null,
+}
+`;
+
+exports[`[Reducer] SUBTRACT_NAME (3) 1`] = `
+Object {
+  "list": Array [
+    Object {
+      "id": 1,
+      "name": "Joao",
+    },
+    Object {
+      "id": 2,
+      "name": "Sara",
+    },
+  ],
+  "post": null,
+}
+`;
