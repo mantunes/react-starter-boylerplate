@@ -1,0 +1,23 @@
+box: node:8.4.0
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `npm install` command
+    - script:
+        name: install JS dependencies
+        code: |
+          npm install
+    # A step that executes `npm test` command
+    - script:
+        name: lint
+        code: |
+          npm run lint
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    - script:
+        name: test
+        code: |
+          npm run test
+
