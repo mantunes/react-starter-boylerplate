@@ -1,6 +1,3 @@
-// import React from 'react';
-// import toJson from 'enzyme-to-json';
-// import mockStore from 'redux-mock-store';
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import Enzyme, { shallow } from 'enzyme';
