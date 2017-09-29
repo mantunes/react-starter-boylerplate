@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { pushRoute, getPost, clearPost } from './../../../redux/modules/App/index';
+import {
+  pushRoute,
+  getPost,
+  clearPost,
+} from './../../../redux/modules/App/index';
 import { login } from './../../../redux/modules/User/index';
 
 class LoginScreen extends React.Component {
