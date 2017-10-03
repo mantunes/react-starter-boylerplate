@@ -1,10 +1,11 @@
 @import "../../../styles/_palette.scss";
 
-.timer_input {
-    font-size: 2rem;
-    min-width: 30rem;
-    color:$pink;
+input {
+  font-size: 2rem;
+  min-width: 30rem;
+  color:$pink;
 }
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $pink;
   text-transform: uppercase;
