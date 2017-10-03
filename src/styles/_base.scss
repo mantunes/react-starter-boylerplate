@@ -1,0 +1,14 @@
+body {
+  background-color: white;
+  color: $dark_grey;
+  font-family: 'Circular-Md', Sans-Serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.001em;
+}
+
+a.label {
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}

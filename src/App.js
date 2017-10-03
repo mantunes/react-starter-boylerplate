@@ -1,9 +1,14 @@
 import React from 'react';
-import Label from './components/atoms/Label';
+import './styles/_index.scss';
+import {ButtonPlay, ButtonStop, ButtonClose} from './components/atoms/Button';
+import TimerBar from './components/ecosystems/TimerBar'
 
 const App = () => (
   <div>
-    <Label />
+    <ButtonPlay/>
+    <ButtonStop/>
+    <ButtonClose/>
+    <TimerBar/>
   </div>
 );
 

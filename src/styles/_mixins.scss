@@ -1,0 +1,11 @@
+@import "./_palette.scss";
+
+@mixin transition($duration:0.2) {
+  transition: #{$duration}s ease-in-out;
+}
+
+@mixin align_center_center() {
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}

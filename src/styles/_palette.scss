@@ -1,0 +1,32 @@
+/*
+--------------------------------------------------------------------------------
+COLORS - alphabetical order
+--------------------------------------------------------------------------------
+*/
+
+
+:export {
+  blue:    #428EF8;
+  green:   #5CE5CC;
+  orange: #FFA70D;
+  pink:   #F268A5;
+  red:    #FF3B23;
+}
+
+
+$blue: #428EF8;
+$green: #5CE5CC;
+$orange: #FFA70D;
+$pink:   #F268A5;
+$red:    #FF3B23;
+
+//text colors
+$dark_grey:  #3C3C3C;
+$grey:       #797979;
+$light_grey: #C2C2C2;
+$white:      #fff;
+
+$shadow : #F4F4F4;
+
+//Backgroud-helpers
+.bg-pink { background-color: $pink; }
