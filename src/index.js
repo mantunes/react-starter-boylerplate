@@ -8,6 +8,8 @@ import promise from 'redux-promise';
 import { persistStore, autoRehydrate } from 'redux-persist';
 import { withState } from 'recompose';
 import PropTypes from 'prop-types';
+import { createNetworkInterface } from 'apollo-client';
+import { ApolloClient, ApolloProvider } from 'react-apollo';
 
 import registerServiceWorker from './registerServiceWorker';
 import Router from './Router';
@@ -26,20 +28,49 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    // Add JWT to the requests header (Apollo)
+    const networkInterface = createNetworkInterface({
+      uri: 'http://localhost:3000/graphql',
+    });
+    networkInterface.use([{
+      applyMiddleware(req, next) {
+        if (!req.options.headers) {
+          req.options.headers = {};
+        }
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5YTNkYjcyNS0zYmMyLTQ2ZDQtYjQxMy0xYmVmMzliNDM5ZTkiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImlhdCI6MTUwNzAyNjI1OSwiZXhwIjoxNTA3MDI5ODU5fQ.uoPKxubXStcQrbc54OXo8jxJ8wD4m0Cyk-Tm3v5MnSc";
+        req.options.headers.authorization = token ? `Bearer ${token}` : null;
+        next();
+      }
+    }]);
+
+    // Apollo Client
+    this.client = new ApolloClient({
+      networkInterface,
+    });
+
+    // Create Store (Redux)
     this.store = createStore(
       combineReducers({
         app,
         user,
         router: routerReducer,
+        apollo: this.client.reducer(),
       }),
       undefined,
-      compose(applyMiddleware(promise, middleware), autoRehydrate()),
+      compose(applyMiddleware(promise,
+                              middleware,
+                              this.client.middleware()),
+              autoRehydrate()),
+      // If you are using the devToolsExtension, you can add it here also
+      (typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined') ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
     );
 
+    // If DEV, allow access to the store
     if (process.env.NODE_ENV === 'development') {
       window.s = this.store;
     }
 
+    // Redux store persist
     persistStore(this.store, { blacklist: ['router'] }, () =>
       this.props.setLoading(false),
     );
@@ -47,11 +78,9 @@ class App extends Component {
 
   render() {
     return !this.props.loading ? (
-      <div className="App">
-        <Provider store={this.store}>
-          <Router history={history} />
-        </Provider>
-      </div>
+      <ApolloProvider store={this.store} client={this.client}>
+        <Router history={history} />
+      </ApolloProvider>
     ) : null;
   }
 }
