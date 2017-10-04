@@ -20,8 +20,12 @@ class LoginScreen extends React.Component {
     clearPost: PropTypes.func.isRequired,
   };
 
-  login = () => {
-    this.props.login('nome do user');
+  login = event => {
+    event.preventDefault();
+    const email = event.target.childNodes[0].value;
+    const pass = event.target.childNodes[1].value;
+    console.log("passou aqui");
+    this.props.login(email, pass);
   };
 
   render() {
@@ -30,7 +34,11 @@ class LoginScreen extends React.Component {
     return (
       <div>
         <p>Login screen</p>
-        <button onClick={this.login}>Login</button>
+        <form onSubmit={this.login} action="">
+          <input type="text" placeholder="email" value="samuthekid@gmail.com" />
+          <input type="password" placeholder="password" value="samu123" />
+          <button type="submit">Login</button>
+        </form>
         <button onClick={getPost}>Get posts</button>
         <button onClick={clearPost}>Clear post</button>
         <hr />
@@ -41,9 +49,9 @@ class LoginScreen extends React.Component {
 }
 
 const actions = dispatch => ({
-  login: name => {
-    dispatch(login(name));
-    dispatch(pushRoute('/'));
+  login: (email, pass) => {
+    dispatch(login(email, pass));
+    //dispatch(pushRoute('/'));
   },
   getPost: () => dispatch(getPost()),
   clearPost: () => dispatch(clearPost()),

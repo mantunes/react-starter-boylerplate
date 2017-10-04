@@ -37,10 +37,10 @@ class App extends Component {
         if (!req.options.headers) {
           req.options.headers = {};
         }
-        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5YTNkYjcyNS0zYmMyLTQ2ZDQtYjQxMy0xYmVmMzliNDM5ZTkiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImlhdCI6MTUwNzAyNjI1OSwiZXhwIjoxNTA3MDI5ODU5fQ.uoPKxubXStcQrbc54OXo8jxJ8wD4m0Cyk-Tm3v5MnSc";
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5YTNkYjcyNS0zYmMyLTQ2ZDQtYjQxMy0xYmVmMzliNDM5ZTkiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImlhdCI6MTUwNzAzMjU3OCwiZXhwIjoxNTA3MDM2MTc4fQ.VuUlo5MVXY3km4ApRyvfqPswmSCcaYCFCeKc0DLqG08";
         req.options.headers.authorization = token ? `Bearer ${token}` : null;
         next();
-      }
+      }  
     }]);
 
     // Apollo Client
@@ -71,7 +71,7 @@ class App extends Component {
     }
 
     // Redux store persist
-    persistStore(this.store, { blacklist: ['router'] }, () =>
+    persistStore(this.store, { blacklist: ['router, apollo'] }, () =>
       this.props.setLoading(false),
     );
   }
